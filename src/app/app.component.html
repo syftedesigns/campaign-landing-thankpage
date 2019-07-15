@@ -1,20 +1,109 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div class="space-50"></div>
+<section>
+    <div class="row">
+        <div class="col-sm text-center">
+            <h1 class="LinotteRegular text-white">
+                Confirmación
+            </h1>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row text-center">
+        <div class="col text-center">
+            <div class="card col-xl-4 offset-xl-4">
+                <div class="space-10"></div>
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>
+                            <mat-icon class="material-icons font-45">date_range</mat-icon>
+                        </mat-card-title>
+                        <mat-card-title>
+                            Has reservado una cita con el equipo de ventas
+                        </mat-card-title>
+                    </mat-card-header>
+                    <div class="space-15"></div>
+                    <mat-divider></mat-divider>
+                    <div class="space-15"></div>
+                    <mat-card-content>
+                        <div class="row">
+                            <div class="col-1">
+                                <mat-icon class="material-icons text-success">fiber_manual_record</mat-icon>
+                            </div>
+                            <div class="col text-left">
+                                <mat-hint>
+                                    {{eventConfirmation.event_type_name}}
+                                </mat-hint>
+                            </div>
+                        </div>
+                        <div class="space-10"></div>
+                        <div class="row">
+                            <div class="col-1">
+                                <mat-icon class="material-icons">schedule</mat-icon>
+                            </div>
+                            <div class="col text-left">
+                                <mat-hint>
+                                    {{eventConfirmation.event_start_time | date:'longDate'}}
+                                </mat-hint>
+                            </div>
+                        </div>
+                        <div class="space-10"></div>
+                        <div class="row">
+                            <div class="col-1">
+                                <mat-icon class="material-icons">language</mat-icon>
+                            </div>
+                            <div class="col text-left">
+                                <mat-hint>
+                                    {{eventConfirmation.event_start_time | date:'mediumTime'}} - {{eventConfirmation.event_end_time | date:'mediumTime'}}
+                                </mat-hint>
+                            </div>
+                        </div>
+                        <div class="space-10"></div>
+                        <div class="row">
+                            <div class="col-1">
+                                <mat-icon class="material-icons">perm_identity</mat-icon>
+                            </div>
+                            <div class="col text-left">
+                                <mat-hint>
+                                    {{eventConfirmation.invitee_first_name}} {{eventConfirmation.invitee_last_name}}
+                                </mat-hint>
+                            </div>
+                        </div>
+                        <div class="space-15"></div>
+                        <h5 class="LinotteRegular">
+                            Se ha enviado los detalles a su correo electrónico
+                        </h5>
+                        <div class="space-15"></div>
+                        <mat-divider></mat-divider>
+                        <div class="space-15"></div>
+                        <div class="row">
+                            <div class="col">
+                                <button onclick="location.href = 'https://www.syftedesigns.com/campaign/services'" mat-raised-button color="primary" type="button">
+                                Explorar más servicios
+                              </button>
+                            </div>
+                            <div class="col">
+                                <div class="space-15 d-md-none"></div>
+                                <button onclick="location.href = 'https://www.syftedesigns.com/es'" mat-raised-button color="light" type="button">
+                                Pagina Principal
+                              </button>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                    <div class="space-50"></div>
+                    <mat-card-footer>
+                        <mat-card-title>
+                            <h5 class="LinotteRegular font-12">
+                                Terminos y condiciones del servicio
+                            </h5>
+                        </mat-card-title>
+                        <mat-hint style="font-size: 10px" class="text-dark font-12">
+                            Podrá <b>cancelar o reprogramar</b> la cita en cualquier momento desde su correo electrónico. <b>En caso de no asistir sin previo aviso o cancelación, será requerida una cuota de $15 antes de poder solicitar algún otro servicio</b>.
+                        </mat-hint>
+                    </mat-card-footer>
+                </mat-card>
+                <div class="space-10"></div>
+            </div>
+        </div>
+    </div>
+</section>
